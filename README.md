@@ -1,1 +1,1 @@
-This is a test repo for grunt
+This is a test repo for susy
