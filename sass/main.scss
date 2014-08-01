@@ -1,0 +1,48 @@
+@import "compass";
+@import "susy";
+@import "breakpoint";
+$cols:12;
+$susy: (
+	columns:$cols,
+	gutters:1/3,
+	gutter-width:2em,
+	math:fluid,
+	output:float,
+	gutter-position:split
+);
+$containerWidth:980px;
+$gutterWidth: susy-get(gutters) ;
+$colWidth: susy-get(col-width);
+$cols-width:"";
+$gutter: gutter();
+.wrapper {
+	@include container($containerWidth);
+	@include border-radius(3px);
+	margin-bottom: 30px;
+	color:black;
+	border: 3px solid red;
+	min-height: 100px;
+	padding: gutter() ;
+}
+.col {
+	background: olive;
+	margin-bottom: 10px;
+	@include span($cols);
+}
+.dupa .col {
+	float: none !important;
+}
+@for $i from  1 through $cols {
+	.col.span#{$i} {
+		@include span($i);
+	}
+}
+@for $i from  1 through $cols {
+	.col.span#{$i}.centered {
+		$dif:($cols - $i)/2;
+		margin-left:span($dif) + (($gutter * 2) + $gutter);
+	}
+}
+
+
+

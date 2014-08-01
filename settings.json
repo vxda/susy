@@ -1,0 +1,28 @@
+{
+	"app": {
+		"port": 9000,
+		"base": "",
+        "docroot": "",
+        "index": "index.html",
+		"js": "js",
+		"sass": "sass",
+		"css": "css",
+		"images": "img",
+		"fonts": "fonts",
+		"snippets": "snippets"
+	},
+	"dist": {
+		"base": "dist",
+		"js": "js",
+		"css": "css",
+		"images": "img",
+		"fonts": "fonts"
+	},
+	"doc": {
+		"base": "doc"
+	},
+	"test": {
+		"base": "test",
+		"specs": "specs"
+	}
+}
